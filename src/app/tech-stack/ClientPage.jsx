@@ -1,0 +1,124 @@
+'use client';
+
+import AnimatedTitle from '@/components/Ui/AnimatedTitle/animatedtitle';
+import { FrontendTools } from '@/data/FrontendTools';
+import { BackendTools } from '@/data/BackendTools';
+import { DeveloperTools } from '@/data/DeveloperTools';
+
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import Link from 'next/link';
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
+
+function ClientPage() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { amount: 0.3, once: true });
+
+  const containerVariant = {
+    hidden: {},
+    visible: { transition: { staggerChildren: 0.5 } },
+  };
+
+  const childVariant = {
+    hidden: { opacity: 0, y: 10 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.5, ease: 'easeInOut' },
+    },
+  };
+
+  return (
+    <section className="h-full w-full flex items-center flex-col px-12 py-12 lg:px-[100px] gap-8 lg:gap-1 bg-[#0C0C0C]">
+      <div className="h-fit w-full lg:w-[90%]">
+        <div className="flex items-center justify-between mb-14">
+          <div className="flex justify-left">
+            <AnimatedTitle
+              text="SHIFT +"
+              className="text-5xl font-semibold text-center text-white customFont lg:text-7xl lg:text-left"
+            />
+            <AnimatedTitle
+              text=" STACK"
+              className="customFont text-[#3B82F6] text-5xl lg:text-7xl text-center lg:text-left font-semibold"
+            />
+          </div>
+          <Link
+            href="/"
+            className="inline-block font-sans text-base text-[#D9D9D9] pr-10">
+            <FontAwesomeIcon icon={faArrowLeft} className="w-4 h-4" /> Back to
+            Home
+          </Link>
+        </div>
+
+        <motion.div
+          ref={ref}
+          className="flex flex-col gap-14"
+          variants={containerVariant}
+          initial="hidden"
+          animate={isInView ? 'visible' : 'hidden'}>
+          {/* Frontend Section */}
+          <motion.div
+            className="w-[90%] flex flex-col gap-3"
+            variants={childVariant}>
+            <h1 className="text-3xl text-white customFont">Frontend</h1>
+            <ul className="flex flex-wrap items-center w-full gap-5 h-fit">
+              {FrontendTools.map((item) => (
+                <li
+                  key={item.id}
+                  className="h-fit w-fit flex flex-row justify-evenly items-center gap-2 bg-[#1A1A1A] border-2 border-[#2C303B] rounded-lg py-2 px-4">
+                  <img src={item.icon} className="h-[30px] w-[30px]" />
+                  <p className="text-[#D9D9D9] text-sm text-center">
+                    {item.label}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* Backend Section */}
+          <motion.div
+            className="w-[90%] flex flex-col gap-3"
+            variants={childVariant}>
+            <h1 className="text-3xl text-white customFont">Backend</h1>
+            <ul className="flex flex-wrap items-center w-full gap-5 h-fit">
+              {BackendTools.map((item) => (
+                <li
+                  key={item.id}
+                  className="h-fit w-fit flex flex-row justify-evenly items-center gap-2 bg-[#1A1A1A] border-2 border-[#2C303B] rounded-lg py-2 px-4">
+                  <img src={item.icon} className="h-[30px] w-[30px]" />
+                  <p className="text-[#D9D9D9] text-sm text-center">
+                    {item.label}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+
+          {/* Developer Tools Section */}
+          <motion.div
+            className="w-[90%] flex flex-col gap-3"
+            variants={childVariant}>
+            <h1 className="text-3xl text-white customFont">Developer Tools</h1>
+            <ul className="flex flex-wrap items-center w-full gap-5 h-fit">
+              {DeveloperTools.map((item) => (
+                <li
+                  key={item.id}
+                  className="h-fit w-fit flex flex-row justify-evenly items-center gap-2 bg-[#1A1A1A] border-2 border-[#2C303B] rounded-lg py-2 px-4">
+                  <img src={item.icon} className="h-[30px] w-[30px]" />
+                  <p className="text-[#D9D9D9] text-sm text-center">
+                    {item.label}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
+export default ClientPage;
