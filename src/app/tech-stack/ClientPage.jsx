@@ -32,24 +32,27 @@ function ClientPage() {
   };
 
   return (
-    <section className="h-full w-full flex items-center flex-col px-12 py-12 lg:px-[100px] gap-8 lg:gap-1 bg-[#0C0C0C]">
+    <section className="h-full w-full flex items-center flex-col px-10 py-12 lg:px-[100px] gap-8 lg:gap-1 bg-[#0C0C0C]">
       <div className="h-fit w-full lg:w-[90%]">
-        <div className="flex items-center justify-between mb-14">
-          <div className="flex justify-left">
+        <div className="flex items-center justify-between mb-10 lg:mb-14">
+          <div className="flex">
             <AnimatedTitle
               text="SHIFT +"
-              className="text-5xl font-semibold text-center text-white customFont lg:text-7xl lg:text-left"
+              className="text-4xl font-semibold text-center text-white customFont lg:text-7xl lg:text-left"
             />
             <AnimatedTitle
               text=" STACK"
-              className="customFont text-[#3B82F6] text-5xl lg:text-7xl text-center lg:text-left font-semibold"
+              className="customFont text-[#3B82F6] text-4xl lg:text-7xl text-center lg:text-left font-semibold"
             />
           </div>
           <Link
             href="/"
-            className="inline-block font-sans text-base text-[#D9D9D9] pr-10">
-            <FontAwesomeIcon icon={faArrowLeft} className="w-4 h-4" /> Back to
-            Home
+            className="inline-block font-sans text-xs lg:text-base text-[#D9D9D9] lg:pr-10">
+            <FontAwesomeIcon
+              icon={faArrowLeft}
+              className="w-3 h-3 lg:w-4 lg:h-4"
+            />{' '}
+            Back to Home
           </Link>
         </div>
 
@@ -61,15 +64,18 @@ function ClientPage() {
           animate={isInView ? 'visible' : 'hidden'}>
           {/* Frontend Section */}
           <motion.div
-            className="w-[90%] flex flex-col gap-3"
+            className="w-[100%] lg:w-[90%] flex flex-col gap-5"
             variants={childVariant}>
             <h1 className="text-3xl text-white customFont">Frontend</h1>
-            <ul className="flex flex-wrap items-center w-full gap-5 h-fit">
+            <ul className="flex flex-wrap items-center w-full gap-4 lg:gap-5 h-fit">
               {FrontendTools.map((item) => (
                 <li
                   key={item.id}
-                  className="h-fit w-fit flex flex-row justify-evenly items-center gap-2 bg-[#1A1A1A] border-2 border-[#2C303B] rounded-lg py-2 px-4">
-                  <img src={item.icon} className="h-[30px] w-[30px]" />
+                  className="h-fit w-fit flex flex-row justify-evenly items-center gap-2 bg-[#1A1A1A] border-2 border-[#2C303B] rounded-lg py-1 px-3 lg:py-2 lg:px-4">
+                  <img
+                    src={item.icon}
+                    className="h-[20px] w-[20px] lg:h-[30px] lg:w-[30px]"
+                  />
                   <p className="text-[#D9D9D9] text-sm text-center">
                     {item.label}
                   </p>
@@ -80,15 +86,18 @@ function ClientPage() {
 
           {/* Backend Section */}
           <motion.div
-            className="w-[90%] flex flex-col gap-3"
+            className="w-[100%] lg:w-[90%] flex flex-col gap-5"
             variants={childVariant}>
             <h1 className="text-3xl text-white customFont">Backend</h1>
-            <ul className="flex flex-wrap items-center w-full gap-5 h-fit">
+            <ul className="flex flex-wrap items-center w-full gap-4 lg:gap-5 h-fit">
               {BackendTools.map((item) => (
                 <li
                   key={item.id}
-                  className="h-fit w-fit flex flex-row justify-evenly items-center gap-2 bg-[#1A1A1A] border-2 border-[#2C303B] rounded-lg py-2 px-4">
-                  <img src={item.icon} className="h-[30px] w-[30px]" />
+                  className="h-fit w-fit flex flex-row justify-evenly items-center gap-2 bg-[#1A1A1A] border-2 border-[#2C303B] rounded-lg py-1 px-3 lg:py-2 lg:px-4">
+                  <img
+                    src={item.icon}
+                    className="h-[20px] w-[20px] lg:h-[30px] lg:w-[30px]"
+                  />
                   <p className="text-[#D9D9D9] text-sm text-center">
                     {item.label}
                   </p>
@@ -99,15 +108,18 @@ function ClientPage() {
 
           {/* Developer Tools Section */}
           <motion.div
-            className="w-[90%] flex flex-col gap-3"
+            className="w-[100%] lg:w-[90%] flex flex-col gap-5"
             variants={childVariant}>
             <h1 className="text-3xl text-white customFont">Developer Tools</h1>
-            <ul className="flex flex-wrap items-center w-full gap-5 h-fit">
+            <ul className="flex flex-wrap items-center w-full gap-4 lg:gap-5 h-fit">
               {DeveloperTools.map((item) => (
                 <li
                   key={item.id}
-                  className="h-fit w-fit flex flex-row justify-evenly items-center gap-2 bg-[#1A1A1A] border-2 border-[#2C303B] rounded-lg py-2 px-4">
-                  <img src={item.icon} className="h-[30px] w-[30px]" />
+                  className="h-fit w-fit flex flex-row justify-evenly items-center gap-2 bg-[#1A1A1A] border-2 border-[#2C303B] rounded-lg py-1 px-3 lg:py-2 lg:px-4">
+                  <img
+                    src={item.icon}
+                    className="h-[20px] w-[20px] lg:h-[30px] lg:w-[30px]"
+                  />
                   <p className="text-[#D9D9D9] text-sm text-center">
                     {item.label}
                   </p>

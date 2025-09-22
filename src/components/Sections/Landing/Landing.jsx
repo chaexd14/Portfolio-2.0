@@ -1,5 +1,4 @@
 'use client';
-import dynamic from 'next/dynamic';
 import React, { useEffect, useState } from 'react';
 import Squares from '@/components/Ui/Squares/Squares';
 import Magnet from '@/components/Ui/Magnet/Magnet';

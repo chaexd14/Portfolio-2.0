@@ -19,28 +19,32 @@ function TechStack() {
     <>
       {/* Tech Stack */}
       <section className="h-fit w-[100%] flex flex-col justify-center items-center px-12 py-24 xl:w-[90%] 2xl:w-[80%] lg:px-[0px] gap-8 lg:gap-12 border border-red-400">
-        <div className="flex items-center justify-between w-[100%]">
-          <div className="flex justify-right">
+        <div className="flex items-center w-[100%]">
+          <div className="flex justify-center w-[50%] border border-red-400">
             <AnimatedTitle
               text="SHIFT +"
-              className="text-5xl font-semibold text-center text-white customFont lg:text-7xl lg:text-left"
+              className="text-4xl font-semibold text-center text-white customFont lg:text-7xl lg:text-left"
             />
 
             <AnimatedTitle
               text=" STACK"
-              className="customFont text-[#3B82F6] text-5xl lg:text-7xl text-center lg:text-left font-semibold"
+              className="customFont text-[#3B82F6] text-4xl lg:text-7xl text-center lg:text-left font-semibold"
             />
           </div>
 
           <Link
             href="/tech-stack"
-            className="inline-block font-sans text-base text-[#D9D9D9] pr-10">
-            View All <FontAwesomeIcon icon={faArrowRight} className="w-4 h-4" />
+            className="inline-block font-sans text-xs lg:text-base text-[#D9D9D9] lg:pr-10 w-[50%] text-right border border-red-400">
+            View All{' '}
+            <FontAwesomeIcon
+              icon={faArrowRight}
+              className="w-3 h-3 lg:w-4 lg:h-4"
+            />
           </Link>
         </div>
 
-        <div className="flex flex-col items-center w-full gap-6 lg:gap-32 lg:flex-row">
-          <div className="h-full w-full text-base text-center lg:text-justify lg:gap-6 xl:text-[20px] text-[#D9D9D9]">
+        <div className="flex flex-col items-center w-full border border-red-400 lg:flex-row">
+          <div className="h-full w-full text-base text-center lg:text-justify lg:gap-6 xl:text-[20px] text-[#D9D9D9] border border-red-400">
             <BlurText
               text="Showcases the programming languages, frameworks, tools, and technologies I use in my development journey."
               delay={80}
@@ -49,7 +53,7 @@ function TechStack() {
               onAnimationComplete={handleAnimationComplete}
             />
           </div>
-          <div className="w-full h-full overflow-hidden z-[60]">
+          <div className="w-full h-full overflow-hidden z-[60] border border-red-400">
             <InfiniteMovingCards
               items={Tools1}
               direction="right"

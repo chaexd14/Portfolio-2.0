@@ -21,23 +21,23 @@ function About() {
       <section
         className="h-fit w-[100%] flex flex-col gap-10 xl:w-[90%] 2xl:w-[75%] lg:gap-6 px-12 py-20 lg:py-16 lg:px-[0px] border border-red-400"
         id="about">
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center border border-red-400">
           <AnimatedTitle
             text="CTRL +"
-            className="font-semibold text-center text-white customFont text-7xl lg:text-left"
+            className="text-6xl font-semibold text-center text-white customFont lg:text-7xl lg:text-left"
           />
 
           <AnimatedTitle
             text=" Me"
-            className="customFont text-[#3B82F6] text-7xl text-center lg:text-left font-semibold"
+            className="customFont text-[#3B82F6] text-6xl text-center lg:text-7xl lg:text-left font-semibold"
           />
         </div>
 
-        <div className="flex flex-col items-center gap-14 lg:gap-14 lg:flex-row">
-          <div className="h-full min-w-[300px] lg:min-w-[390px]">
+        <div className="flex flex-col items-center border border-red-400 gap-14 lg:gap-14 lg:flex-row">
+          <div className="h-full min-w-[300px] lg:min-w-[390px] border border-red-400">
             <ImgSlider testimonials={testimonials} autoplay={true} />
           </div>
-          <div className="h-full w-full flex flex-col justify-center gap-8 text-base text-center lg:gap-16 lg:text-[20px] text-[#D9D9D9] lg:text-justify">
+          <div className="h-full w-full flex flex-col justify-center gap-8 text-base text-center lg:gap-16 lg:text-[20px] text-[#D9D9D9] lg:text-justify border border-red-400">
             <BlurText
               text="I'm a 2nd-year IT student at Rizal Technological University who enjoys coding and problem solving as I work toward becoming a Full Stack Developer."
               delay={80}
