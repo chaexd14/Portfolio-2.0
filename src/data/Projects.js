@@ -5,7 +5,7 @@ export const Projects_List = [
     description: 'Event Booking and Event Management System',
     subtitle: 'Tech Stack',
     stack: ['React', 'Js', 'Node', 'Php', 'Sql'],
-    background: 'images/bg1.png',
+    background: 'images/bg1.webp',
   },
   {
     id: 1,
@@ -13,7 +13,7 @@ export const Projects_List = [
     description: 'Nomination, Voting and Event Management System',
     subtitle: 'Tech Stack',
     stack: ['React', 'Js', 'Node', 'Php', 'Sql'],
-    background: 'images/bg2.png',
+    background: 'images/bg2.webp',
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ export const Projects_List = [
     description: 'Parking and Ticketing Management System',
     subtitle: 'Tech Stack',
     stack: ['C++', 'Sql'],
-    background: 'images/bg3.png',
+    background: 'images/bg3.webp',
   },
   {
     id: 3,
@@ -29,6 +29,6 @@ export const Projects_List = [
     description: 'Open source Schedule making app',
     subtitle: 'Tech Stack',
     stack: ['React', 'Js', 'Node'],
-    background: 'images/bg4.PNG',
+    background: 'images/bg4.webp',
   },
 ];

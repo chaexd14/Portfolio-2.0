@@ -95,7 +95,7 @@ function Band({ maxSpeed = 50, minSpeed = 0 }) {
     linearDamping: 4,
   };
   const { nodes, materials } = useGLTF('/models/card.glb');
-  const texture = useTexture('/models/lanyard.png');
+  const texture = useTexture('/models/lanyard.webp');
   const curve = useMemo(
     () =>
       new THREE.CatmullRomCurve3([

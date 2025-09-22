@@ -10,9 +10,9 @@ function About() {
 
   // Image showcase
   const testimonials = [
-    { src: '/images/me.jpg' },
-    { src: '/images/me1.jpg' },
-    { src: '/images/me2.jpg' },
+    { src: '/images/me.webp' },
+    { src: '/images/me1.webp' },
+    { src: '/images/me2.webp' },
   ];
 
   return (
