@@ -30,19 +30,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        {/* Preload your small CSS file to prevent render blocking */}
-        <link
-          rel="preload"
-          href="/css/bb2e23f0582de1e4.css"
-          as="style"
-          onLoad="this.onload=null;this.rel='stylesheet'"
-        />
-        <noscript>
-          <link rel="stylesheet" href="/css/bb2e23f0582de1e4.css" />
-        </noscript>
-      </head>
-
+      <head />
       <body>
         {children}
         <footer className="py-4 text-center text-[#D9D9D9] bg-[#0E0E0E] border-t border-b border-[#B7B5C2]">
