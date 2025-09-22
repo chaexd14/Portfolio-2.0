@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'customFont';
-  src: url('../font/My_Font.ttf') format('truetype');
+  src: url('/fonts/My_Font.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
