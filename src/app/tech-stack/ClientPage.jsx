@@ -32,10 +32,10 @@ function ClientPage() {
   };
 
   return (
-    <section className="h-full w-full flex items-center flex-col px-10 py-12 lg:px-[100px] gap-8 lg:gap-1 bg-[#0C0C0C]">
-      <div className="h-fit w-full lg:w-[90%]">
-        <div className="flex items-center justify-between mb-10 lg:mb-14">
-          <div className="flex">
+    <section className="h-full w-full flex items-center flex-col px-10 py-12 lg:px-[100px] gap-8 lg:gap-1 bg-[#0C0C0C] border border-red-400">
+      <div className="h-fit w-full lg:w-[90%] border border-red-400 flex flex-col items-center">
+        <div className="flex items-center justify-between w-full border border-red-400 lg:mb-14">
+          <div className="flex border border-red-400">
             <AnimatedTitle
               text="SHIFT +"
               className="text-4xl font-semibold text-center text-white customFont lg:text-7xl lg:text-left"
@@ -47,7 +47,7 @@ function ClientPage() {
           </div>
           <Link
             href="/"
-            className="inline-block font-sans text-xs lg:text-base text-[#D9D9D9] lg:pr-10">
+            className="inline-block font-sans text-xs lg:text-base text-[#D9D9D9] lg:pr-10 border border-red-400">
             <FontAwesomeIcon
               icon={faArrowLeft}
               className="w-3 h-3 lg:w-4 lg:h-4"
@@ -58,13 +58,13 @@ function ClientPage() {
 
         <motion.div
           ref={ref}
-          className="flex flex-col gap-14"
+          className="flex flex-col border border-red-400 gap-14 w-[90%]"
           variants={containerVariant}
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}>
           {/* Frontend Section */}
           <motion.div
-            className="w-[100%] lg:w-[90%] flex flex-col gap-5"
+            className="w-[100%] flex flex-col gap-5 border border-red-400"
             variants={childVariant}>
             <h1 className="text-3xl text-white customFont">Frontend</h1>
             <ul className="flex flex-wrap items-center w-full gap-4 lg:gap-5 h-fit">
@@ -86,7 +86,7 @@ function ClientPage() {
 
           {/* Backend Section */}
           <motion.div
-            className="w-[100%] lg:w-[90%] flex flex-col gap-5"
+            className="w-[100%] flex flex-col gap-5 border border-red-400"
             variants={childVariant}>
             <h1 className="text-3xl text-white customFont">Backend</h1>
             <ul className="flex flex-wrap items-center w-full gap-4 lg:gap-5 h-fit">
@@ -108,7 +108,7 @@ function ClientPage() {
 
           {/* Developer Tools Section */}
           <motion.div
-            className="w-[100%] lg:w-[90%] flex flex-col gap-5"
+            className="w-[100%] flex flex-col gap-5 border border-red-400"
             variants={childVariant}>
             <h1 className="text-3xl text-white customFont">Developer Tools</h1>
             <ul className="flex flex-wrap items-center w-full gap-4 lg:gap-5 h-fit">
