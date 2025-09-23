@@ -9,6 +9,7 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 
@@ -72,8 +73,11 @@ function ClientPage() {
                 <li
                   key={item.id}
                   className="h-fit w-fit flex flex-row justify-evenly items-center gap-2 bg-[#1A1A1A] border-2 border-[#2C303B] rounded-lg py-1 px-3 lg:py-2 lg:px-4">
-                  <img
+                  <Image
                     src={item.icon}
+                    alt="icon"
+                    width={40}
+                    height={40}
                     className="h-[20px] w-[20px] lg:h-[30px] lg:w-[30px]"
                   />
                   <p className="text-[#D9D9D9] text-sm text-center">
