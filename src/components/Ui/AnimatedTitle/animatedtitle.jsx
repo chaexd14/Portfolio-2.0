@@ -1,29 +1,24 @@
 'use client';
-import { useEffect, useRef } from 'react';
-import { motion, animate, stagger, useInView } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
 
 const AnimatedTitle = ({ text, className = '' }) => {
   const containerRef = useRef(null);
   const isInView = useInView(containerRef, { once: true, amount: 0.5 });
 
-  useEffect(() => {
-    if (!isInView || !containerRef.current) return;
-
-    containerRef.current.style.visibility = 'visible';
-
-    const elements = containerRef.current.querySelectorAll('span.animate-char');
-
-    animate(
-      elements,
-      { opacity: [0, 1], y: [10, 0] },
-      {
-        type: 'spring',
-        duration: 2,
-        bounce: 0.2,
-        delay: stagger(0.03),
-      }
-    );
-  }, [isInView]);
+  // Variants for smooth + bouncy effect
+  const charVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (i) => ({
+      opacity: 1,
+      y: [20, -5, 2, 0], // small bounce keyframes
+      transition: {
+        delay: i * 0.04,
+        duration: 0.8, // total time in seconds
+        ease: 'easeOut',
+      },
+    }),
+  };
 
   return (
     <motion.h1
@@ -32,20 +27,21 @@ const AnimatedTitle = ({ text, className = '' }) => {
       style={{
         display: 'flex',
         flexWrap: 'wrap',
-        visibility: 'hidden',
         whiteSpace: 'pre-wrap',
       }}>
       {[...text].map((char, index) => (
-        <span
+        <motion.span
           key={index}
-          className={char === ' ' ? '' : 'animate-char'}
+          custom={index}
+          variants={charVariants}
+          initial="hidden"
+          animate={isInView ? 'visible' : 'hidden'}
           style={{
-            opacity: 0,
             display: 'inline-block',
             whiteSpace: char === ' ' ? 'pre' : 'normal',
           }}>
           {char}
-        </span>
+        </motion.span>
       ))}
     </motion.h1>
   );
