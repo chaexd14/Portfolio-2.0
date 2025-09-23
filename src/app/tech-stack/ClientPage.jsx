@@ -18,7 +18,7 @@ function ClientPage() {
 
   const containerVariant = {
     hidden: {},
-    visible: { transition: { staggerChildren: 0.5 } },
+    visible: { transition: { staggerChildren: 0.3 } },
   };
 
   const childVariant = {
@@ -27,7 +27,7 @@ function ClientPage() {
       opacity: 1,
       y: 0,
       scale: 1,
-      transition: { duration: 0.5, ease: 'easeInOut' },
+      transition: { duration: 0.3, ease: 'easeInOut' },
     },
   };
 
@@ -58,13 +58,13 @@ function ClientPage() {
 
         <motion.div
           ref={ref}
-          className="flex flex-col border border-red-400 gap-14 w-[90%]"
+          className="flex flex-col border border-red-400 gap-14 w-full lg:w-[90%]"
           variants={containerVariant}
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}>
           {/* Frontend Section */}
           <motion.div
-            className="w-[100%] flex flex-col gap-5 border border-red-400"
+            className="w-[100%] flex flex-col gap-3 lg:gap-5 border border-red-400"
             variants={childVariant}>
             <h1 className="text-3xl text-white customFont">Frontend</h1>
             <ul className="flex flex-wrap items-center w-full gap-4 lg:gap-5 h-fit">
@@ -86,7 +86,7 @@ function ClientPage() {
 
           {/* Backend Section */}
           <motion.div
-            className="w-[100%] flex flex-col gap-5 border border-red-400"
+            className="w-[100%] flex flex-col gap-3 lg:gap-5 border border-red-400"
             variants={childVariant}>
             <h1 className="text-3xl text-white customFont">Backend</h1>
             <ul className="flex flex-wrap items-center w-full gap-4 lg:gap-5 h-fit">
@@ -108,7 +108,7 @@ function ClientPage() {
 
           {/* Developer Tools Section */}
           <motion.div
-            className="w-[100%] flex flex-col gap-5 border border-red-400"
+            className="w-[100%] flex flex-col gap-3 lg:gap-5 border border-red-400"
             variants={childVariant}>
             <h1 className="text-3xl text-white customFont">Developer Tools</h1>
             <ul className="flex flex-wrap items-center w-full gap-4 lg:gap-5 h-fit">
