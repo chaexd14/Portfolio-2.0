@@ -117,7 +117,7 @@ function Contact() {
               <h1 className="mb-3 text-base text-white desktop:text-2xl">
                 Social
               </h1>
-              <div className="grid grid-cols-3 gap-5 w-fit">
+              <div className="grid grid-cols-4 gap-5 desktop:grid-cols-3 w-fit">
                 <a
                   href="https://www.instagram.com/chaeyxd/"
                   target="_blank"

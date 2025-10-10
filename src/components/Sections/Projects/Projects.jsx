@@ -59,7 +59,7 @@ function Projects() {
                 </div>
                 <div className="absolute inset-0 bg-[#1A1A1A]/70"></div>
                 <div className="absolute inset-0 pointer-events-none bg-gradient-radial from-transparent to-[#131315]"></div>
-                <motion.div className="z-10 h-[60%] flex flex-col justify-evenly p-5 transition-all duration-300 ease-in-out group-hover:h-[70%] border border-red-400">
+                <motion.div className="z-10 h-[70%] flex flex-col justify-evenly p-5 transition-all duration-300 ease-in-out group-hover:h-[80%] border border-red-400 desktop:h-[60%] desktop:group-hover:h-[70%]">
                   <div className="mb-2 h-fit desktop:mb-4">
                     <h1 className="mb-2 text-xl font-semibold text-white desktop:text-xl">
                       {project.title}
