@@ -19,28 +19,28 @@ function About() {
     <>
       {/* About */}
       <section
-        className="h-fit w-[100%] flex flex-col gap-10 xl:w-[90%] 2xl:w-[75%] lg:gap-6 px-12 py-20 lg:py-16 lg:px-[0px] border border-red-400"
+        className="h-fit w-[100%] flex flex-col gap-10 p-12 border border-red-400 desktop:w-[85%]"
         id="about">
         <div className="flex items-center justify-center border border-red-400">
           <AnimatedTitle
             text="CTRL +"
-            className="text-6xl font-semibold text-center text-white customFont lg:text-7xl lg:text-left"
+            className="text-6xl font-semibold text-center text-white customFont desktop:text-7xl"
           />
 
           <AnimatedTitle
             text=" Me"
-            className="customFont text-[#3B82F6] text-6xl text-center lg:text-7xl lg:text-left font-semibold"
+            className="customFont text-[#3B82F6] text-6xl text-center font-semibold desktop:text-7xl"
           />
         </div>
 
-        <div className="flex flex-col items-center border border-red-400 gap-14 lg:gap-14 lg:flex-row">
-          <div className="h-full min-w-[300px] lg:min-w-[390px] border border-red-400">
+        <div className="flex flex-col items-center gap-10 border border-red-400 desktop:flex-row desktop:gap-20">
+          <div className="h-full min-w-[250px] border border-red-400 desktop:min-w-[350px]">
             <ImgSlider testimonials={testimonials} autoplay={true} />
           </div>
-          <div className="h-full w-full flex flex-col justify-center gap-8 text-base text-center lg:gap-16 lg:text-[20px] text-[#D9D9D9] lg:text-justify border border-red-400">
+          <div className="h-full w-full flex flex-col gap-8 text-sm text-center leading-relaxed text-[#D9D9D9] border border-red-400 desktop:text-xl desktop:text-justify">
             <BlurText
-              text="I'm a 2nd-year IT student at Rizal Technological University who enjoys coding and problem solving as I work toward becoming a Full Stack Developer."
-              delay={80}
+              text="I'm a 2nd-year IT student at Rizal Technological University who enjoys coding and problem-solving as I work toward becoming a Full Stack Web Developer. I am focused on developing my technical skills and gaining practical experience to prepare for a professional career in Web Development."
+              delay={50}
               animateBy="words"
               direction="top"
               onAnimationComplete={handleAnimationComplete}
@@ -48,7 +48,7 @@ function About() {
 
             <BlurText
               text="When I’m not working on tech projects, you’ll find me Gaming, Drawing, Crafting or riding my Motorcycle as I blend creativity with code to make a difference."
-              delay={80}
+              delay={50}
               animateBy="words"
               direction="top"
               onAnimationComplete={handleAnimationComplete}

@@ -9,6 +9,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      // Screen
+      screens: {
+        mobile: '360px', // all phones
+        tablet: '768px', // tablets
+        laptop: '1024px', // small laptops
+        desktop: '1280px', // full HD
+        wide: '1536px', // 2K screens
+        ultrawide: '2560px', // 4K screens
+      },
       // Animations
       keyframes: {
         scroll: {

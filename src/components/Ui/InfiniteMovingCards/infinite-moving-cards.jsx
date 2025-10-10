@@ -64,9 +64,14 @@ export const InfiniteMovingCards = ({
         {items.map((item) => (
           <li
             key={item.id}
-            className="h-[80px] w-[80px] flex flex-col justify-evenly items-center bg-[#1A1A1A] border-2 border-[#2C303B] rounded-lg">
-            <img src={item.icon} className="h-[30px] w-[30px]" />
-            <p className="text-[#D9D9D9] text-sm text-center">{item.label}</p>
+            className="aspect-square w-[70px] flex flex-col justify-evenly items-center bg-[#1A1A1A] border-2 border-[#2C303B] rounded-lg desktop:w-[90px]">
+            <img
+              src={item.icon}
+              className="object-contain w-1/3 h-auto desktop:w-[40%]"
+            />
+            <p className="text-[#D9D9D9] text-xs text-center break-words desktop:text-base">
+              {item.label}
+            </p>
           </li>
         ))}
       </ul>

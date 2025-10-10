@@ -18,7 +18,7 @@ export default function Home() {
 
   return (
     <>
-      <main className="min-h-screen w-full bg-[#0C0C0C]">
+      <main className="min-h-screen w-full bg-[#0C0C0C] flex flex-col">
         <header className="fixed h-full w-full pb-6 z-[70] lg:h-fit lg:pt-6 pointer-events-none">
           <nav className="h-full w-full flex items-end justify-center lg:items-center lg:h-[80px] z-[999]">
             <NavBar sectionRefs={sectionRefs} />
@@ -32,26 +32,26 @@ export default function Home() {
 
         {/* About */}
         <section
-          className="h-fit w-full flex items-center justify-center bg-[#121212] border-t border-b border-[#B7B5C2]"
+          className="h-fit w-full flex items-center justify-center bg-[#121212] border-t border-b border-[#B7B5C2] desktop:mb-10"
           ref={sectionRefs.about}>
           <About />
         </section>
 
         {/* Stack */}
-        <section className="flex items-center justify-center w-full h-fit">
+        <section className="flex items-center justify-center w-full h-fit desktop:my-10">
           <TechStack />
         </section>
 
         {/* Projects */}
         <section
-          className="px-12 lg:px-[100px] z-[999]"
+          className="flex items-center justify-center w-full h-fit desktop:my-10"
           ref={sectionRefs.projects}>
           <Projects />
         </section>
 
         {/* Contact */}
         <section
-          className="bg-[#121212] border-t border-b border-[#B7B5C2] z-[99] px-12 lg:px-[100px]"
+          className="h-fit w-full flex items-center justify-center bg-[#121212] border-t border-b border-[#B7B5C2] desktop:mt-10"
           ref={sectionRefs.contacts}>
           <Contact />
         </section>

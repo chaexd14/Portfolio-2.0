@@ -24,9 +24,9 @@ export const ImgSlider = ({ testimonials, autoplay = false }) => {
   }, [autoplay]);
 
   return (
-    <div className="w-full px-8 py-8 font-sans antialiased md:px-8 lg:px-16">
+    <div className="w-full px-8 py-8 font-sans antialiased desktop:px-14">
       <div className="relative">
-        <div className="relative h-[280px] lg:h-80">
+        <div className="relative h-[220px] desktop:h-[300px]">
           <AnimatePresence>
             {testimonials.map((testimonial, index) => (
               <motion.div

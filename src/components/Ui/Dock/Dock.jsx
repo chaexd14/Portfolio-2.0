@@ -158,7 +158,7 @@ export default function Dock({
           isHovered.set(0);
           mouseX.set(Infinity);
         }}
-        className={`${className} border border-[#2C303B] flex items-end w-fit gap-4 rounded-2xl pb-[10px] px-8 transition-colors duration-300 ease-in-out lg:items-start lg:pt-[10px] ${
+        className={`${className} border-2 border-[#2C303B] flex items-end w-fit gap-4 rounded-2xl pb-[8px] px-8 transition-colors duration-300 ease-in-out lg:items-start lg:pt-[8px] ${
           scrolled ? 'bg-[#0C0C0C]/90' : 'bg-[#1A1A1A]/90'
         }`}
         style={{ height: panelHeight }}

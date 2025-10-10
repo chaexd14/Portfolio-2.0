@@ -19,7 +19,7 @@ function ClientPage() {
 
   const containerVariant = {
     hidden: {},
-    visible: { transition: { staggerChildren: 0.3 } },
+    visible: { transition: { staggerChildren: 0.4 } },
   };
 
   const childVariant = {
@@ -28,59 +28,61 @@ function ClientPage() {
       opacity: 1,
       y: 0,
       scale: 1,
-      transition: { duration: 0.3, ease: 'easeInOut' },
+      transition: { duration: 0.4, ease: 'easeInOut' },
     },
   };
 
   return (
-    <section className="h-full w-full flex items-center flex-col px-10 py-12 lg:px-[100px] gap-8 lg:gap-1 bg-[#0C0C0C] border border-red-400">
-      <div className="h-fit w-full lg:w-[90%] border border-red-400 flex flex-col items-center">
-        <div className="flex items-center justify-between w-full border border-red-400 lg:mb-14">
+    <section className="min-h-screen w-full flex items-center justify-center flex-col p-8 gap-8 bg-[#0C0C0C] border border-red-400">
+      <div className="flex flex-col items-center w-full h-full gap-8 border border-red-400 desktop:w-[90%] desktop:gap-16">
+        <div className="flex items-center justify-between w-full border border-red-400">
           <div className="flex border border-red-400">
             <AnimatedTitle
               text="SHIFT +"
-              className="text-4xl font-semibold text-center text-white customFont lg:text-7xl lg:text-left"
+              className="text-4xl font-semibold text-center text-white customFont desktop:text-7xl"
             />
             <AnimatedTitle
               text=" STACK"
-              className="customFont text-[#3B82F6] text-4xl lg:text-7xl text-center lg:text-left font-semibold"
+              className="customFont text-[#3B82F6] text-4xl text-center font-semibold desktop:text-7xl"
             />
           </div>
           <Link
             href="/"
-            className="inline-block font-sans text-xs lg:text-base text-[#D9D9D9] lg:pr-10 border border-red-400">
+            className="inline-block font-sans text-xs lg:text-base text-[#D9D9D9] lg:pr-10 border border-red-400 desktop:text-xl">
             <FontAwesomeIcon
               icon={faArrowLeft}
-              className="w-3 h-3 lg:w-4 lg:h-4"
+              className="w-3 h-3 desktop:w-5 desktop:h-5"
             />{' '}
-            Back to Home
+            Back Home
           </Link>
         </div>
 
         <motion.div
           ref={ref}
-          className="flex flex-col border border-red-400 gap-14 w-full lg:w-[90%]"
+          className="flex flex-col w-full gap-8 border border-red-400 desktop:gap-14"
           variants={containerVariant}
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}>
           {/* Frontend Section */}
           <motion.div
-            className="w-[100%] flex flex-col gap-3 lg:gap-5 border border-red-400"
+            className="w-[100%] flex flex-col gap-3 border border-red-400"
             variants={childVariant}>
-            <h1 className="text-3xl text-white customFont">Frontend</h1>
-            <ul className="flex flex-wrap items-center w-full gap-4 lg:gap-5 h-fit">
+            <h1 className="text-3xl text-white customFont desktop:text-4xl desktop:mb-3">
+              Frontend
+            </h1>
+            <ul className="flex flex-wrap items-center w-full gap-4 h-fit desktop:gap-8">
               {FrontendTools.map((item) => (
                 <li
                   key={item.id}
-                  className="h-fit w-fit flex flex-row justify-evenly items-center gap-2 bg-[#1A1A1A] border-2 border-[#2C303B] rounded-lg py-1 px-3 lg:py-2 lg:px-4">
+                  className="h-fit w-fit flex flex-row justify-evenly items-center gap-3 bg-[#1A1A1A] border-2 border-[#2C303B] rounded-lg py-1 px-3 desktop:py-3 desktop:px-5">
                   <Image
                     src={item.icon}
                     alt={item.label}
                     width={40}
                     height={40}
-                    className="h-[20px] w-[20px] lg:h-[30px] lg:w-[30px]"
+                    className="h-[20px] w-[20px] desktop:h-[30px] desktop:w-[30px]"
                   />
-                  <p className="text-[#D9D9D9] text-sm text-center">
+                  <p className="text-[#D9D9D9] text-sm text-center desktop:text-base">
                     {item.label}
                   </p>
                 </li>
@@ -90,19 +92,24 @@ function ClientPage() {
 
           {/* Backend Section */}
           <motion.div
-            className="w-[100%] flex flex-col gap-3 lg:gap-5 border border-red-400"
+            className="w-[100%] flex flex-col gap-3 border border-red-400"
             variants={childVariant}>
-            <h1 className="text-3xl text-white customFont">Backend</h1>
-            <ul className="flex flex-wrap items-center w-full gap-4 lg:gap-5 h-fit">
+            <h1 className="text-3xl text-white customFont desktop:text-4xl desktop:mb-3">
+              Backend
+            </h1>
+            <ul className="flex flex-wrap items-center w-full gap-4 h-fit desktop:gap-8">
               {BackendTools.map((item) => (
                 <li
                   key={item.id}
-                  className="h-fit w-fit flex flex-row justify-evenly items-center gap-2 bg-[#1A1A1A] border-2 border-[#2C303B] rounded-lg py-1 px-3 lg:py-2 lg:px-4">
-                  <img
+                  className="h-fit w-fit flex flex-row justify-evenly items-center gap-3 bg-[#1A1A1A] border-2 border-[#2C303B] rounded-lg py-1 px-3 desktop:py-3 desktop:px-5">
+                  <Image
                     src={item.icon}
-                    className="h-[20px] w-[20px] lg:h-[30px] lg:w-[30px]"
+                    alt={item.label}
+                    width={40}
+                    height={40}
+                    className="h-[20px] w-[20px] desktop:h-[30px] desktop:w-[30px]"
                   />
-                  <p className="text-[#D9D9D9] text-sm text-center">
+                  <p className="text-[#D9D9D9] text-sm text-center desktop:text-base">
                     {item.label}
                   </p>
                 </li>
@@ -114,17 +121,22 @@ function ClientPage() {
           <motion.div
             className="w-[100%] flex flex-col gap-3 lg:gap-5 border border-red-400"
             variants={childVariant}>
-            <h1 className="text-3xl text-white customFont">Developer Tools</h1>
-            <ul className="flex flex-wrap items-center w-full gap-4 lg:gap-5 h-fit">
+            <h1 className="text-3xl text-white customFont desktop:text-4xl desktop:mb-3">
+              Developer Tools
+            </h1>
+            <ul className="flex flex-wrap items-center w-full gap-4 h-fit desktop:gap-8">
               {DeveloperTools.map((item) => (
                 <li
                   key={item.id}
-                  className="h-fit w-fit flex flex-row justify-evenly items-center gap-2 bg-[#1A1A1A] border-2 border-[#2C303B] rounded-lg py-1 px-3 lg:py-2 lg:px-4">
-                  <img
+                  className="h-fit w-fit flex flex-row justify-evenly items-center gap-3 bg-[#1A1A1A] border-2 border-[#2C303B] rounded-lg py-1 px-3 desktop:py-3 desktop:px-5">
+                  <Image
                     src={item.icon}
-                    className="h-[20px] w-[20px] lg:h-[30px] lg:w-[30px]"
+                    alt={item.label}
+                    width={40}
+                    height={40}
+                    className="h-[20px] w-[20px] desktop:h-[30px] desktop:w-[30px]"
                   />
-                  <p className="text-[#D9D9D9] text-sm text-center">
+                  <p className="text-[#D9D9D9] text-sm text-center desktop:text-base">
                     {item.label}
                   </p>
                 </li>

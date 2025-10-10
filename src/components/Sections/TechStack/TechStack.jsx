@@ -18,42 +18,42 @@ function TechStack() {
   return (
     <>
       {/* Tech Stack */}
-      <section className="h-fit w-[100%] flex flex-col justify-center items-center px-12 py-24 xl:w-[90%] 2xl:w-[80%] lg:px-[0px] gap-8 lg:gap-12 border border-red-400">
-        <div className="flex items-center w-[100%]">
-          <div className="flex justify-center w-[50%] border border-red-400">
+      <section className="h-fit w-[100%] flex flex-col justify-center items-center p-12 gap-8 border border-red-400 desktop:w-[80%]">
+        <div className="flex items-center justify-between w-full border border-red-400 desktop:px-20">
+          <div className="flex items-center justify-center border border-red-400 w-fit">
             <AnimatedTitle
               text="SHIFT +"
-              className="text-4xl font-semibold text-center text-white customFont lg:text-7xl lg:text-left"
+              className="text-4xl font-semibold text-center text-white customFont desktop:text-7xl"
             />
 
             <AnimatedTitle
               text=" STACK"
-              className="customFont text-[#3B82F6] text-4xl lg:text-7xl text-center lg:text-left font-semibold"
+              className="customFont text-[#3B82F6] text-4xl text-center font-semibold desktop:text-7xl"
             />
           </div>
 
           <Link
             href="/tech-stack"
-            className="inline-block font-sans text-xs lg:text-base text-[#D9D9D9] lg:pr-10 w-[50%] text-right border border-red-400">
+            className="inline-block font-sans text-xs text-[#D9D9D9] w-fit text-right border border-red-400 desktop:text-xl">
             View All{' '}
             <FontAwesomeIcon
               icon={faArrowRight}
-              className="w-3 h-3 lg:w-4 lg:h-4"
+              className="w-3 h-3 desktop:w-5 desktop:h-5"
             />
           </Link>
         </div>
 
-        <div className="flex flex-col items-center w-full border border-red-400 lg:flex-row">
-          <div className="h-full w-full text-base text-center lg:text-justify lg:gap-6 xl:text-[20px] text-[#D9D9D9] border border-red-400">
+        <div className="flex flex-col items-center justify-center w-full gap-10 border border-red-400 desktop:flex-row desktop:gap-20">
+          <div className="h-full w-full text-sm text-center text-[#D9D9D9] border border-red-400 desktop:text-2xl desktop:text-justify">
             <BlurText
               text="Showcases the programming languages, frameworks, tools, and technologies I use in my development journey."
-              delay={80}
+              delay={50}
               animateBy="words"
               direction="top"
               onAnimationComplete={handleAnimationComplete}
             />
           </div>
-          <div className="w-full h-full overflow-hidden z-[60] border border-red-400">
+          <div className="w-full h-full overflow-hidden border border-red-400">
             <InfiniteMovingCards
               items={Tools1}
               direction="right"

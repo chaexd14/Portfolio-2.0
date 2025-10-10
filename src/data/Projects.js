@@ -4,7 +4,7 @@ export const Projects_List = [
     title: 'MODA',
     description: 'Event Booking and Event Management System',
     subtitle: 'Tech Stack',
-    stack: ['React', 'Js', 'Node', 'Php', 'Sql'],
+    stack: ['React', 'Js', 'Php', 'Sql'],
     background: 'images/bg1.webp',
   },
   {
@@ -12,7 +12,7 @@ export const Projects_List = [
     title: 'Sanggunian Kabataan',
     description: 'Nomination, Voting and Event Management System',
     subtitle: 'Tech Stack',
-    stack: ['React', 'Js', 'Node', 'Php', 'Sql'],
+    stack: ['React', 'Js', 'Php', 'Sql'],
     background: 'images/bg2.webp',
   },
   {
@@ -28,7 +28,7 @@ export const Projects_List = [
     title: 'My Schedule',
     description: 'Open source Schedule making app',
     subtitle: 'Tech Stack',
-    stack: ['React', 'Js', 'Node'],
+    stack: ['React', 'Js', 'MongoDB'],
     background: 'images/bg4.webp',
   },
 ];

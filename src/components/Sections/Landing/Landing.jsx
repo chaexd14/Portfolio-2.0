@@ -20,14 +20,16 @@ function Landing() {
   };
 
   // Resize state for lanyard
-  const [groupPosition, setGroupPosition] = useState([0, 0, 13]);
+  const [groupPosition, setGroupPosition] = useState([0, 0, 15]);
 
   // Resize state
   useEffect(() => {
     const updatePosition = () => {
       const isMobile = window.innerWidth < 1024;
-      setGroupPosition(isMobile ? [0, 0, 9] : [0, 0, 13]);
+      setGroupPosition(isMobile ? [0, 0, 10] : [0, 0, 15]);
     };
+
+    updatePosition();
 
     window.addEventListener('resize', updatePosition);
     return () => window.removeEventListener('resize', updatePosition);
@@ -47,12 +49,12 @@ function Landing() {
       </div>
 
       {/* Hero */}
-      <section className="min-h-screen w-full grid grid-cols-1 grid-rows-3 gap-0 lg:flex lg:items-center lg:w-[80%]">
-        <div className="flex-1 flex justify-start items-center w-full h-full flex-col gap-4 row-span-2 col-start-1 row-start-2 pt-[20%] lg:pt-0 lg:row-start-1 lg:items-start lg:justify-center lg:pl-24 2xl:pl-36">
+      <section className="grid w-full min-h-screen grid-cols-1 grid-rows-3 gap-0">
+        <div className="flex-1 flex justify-start items-center w-full h-full flex-col gap-4 row-span-2 col-start-1 row-start-2 pt-[20%] desktop:pt-0 desktop:items-start desktop:pl-44">
           <div className="flex gap-4">
             <SplitText
               text="Hi, Im"
-              className="text-5xl font-bold text-white customFont xl:text-8xl 2xl:text-9xl"
+              className="text-5xl font-bold text-white customFont desktop:text-9xl"
               delay={100}
               duration={0.6}
               repeatDelay={10}
@@ -67,7 +69,7 @@ function Landing() {
             />
             <SplitText
               text="King Amato"
-              className="customFont text-[#3B82F6] text-5xl font-bold xl:text-8xl 2xl:text-9xl"
+              className="customFont text-[#3B82F6] text-5xl font-bold desktop:text-9xl"
               delay={100}
               duration={0.6}
               repeatDelay={10}
@@ -91,25 +93,26 @@ function Landing() {
               borderColor="#3B82F6"
               animationDuration={0.5}
               pauseBetweenAnimations={1}
+              className="desktop:text-3xl"
             />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0, transition: { duration: 0.5 } }}
-            className="z-40 flex items-center justify-center gap-1">
+            className="z-40 flex items-center justify-center gap-1 mt-2">
             <FontAwesomeIcon
               icon={faLocationDot}
-              className="text-[#3B82F6] text-2xl animate-bounce-slow"
+              className="text-[#3B82F6] text-2xl animate-bounce-slow desktop:text-3xl"
             />
             <ShinyText
               text="Philippines"
               disabled={false}
               speed={3}
-              className="text-2xl font-semibold text-[#E0E0E0]"
+              className="text-2xl font-semibold text-[#E0E0E0] desktop:text-3xl"
             />
           </motion.div>
-          <div className="z-40 mt-4">
-            <ul className="flex gap-5 text-white lg:gap-8">
+          <div className="z-50 mt-4">
+            <ul className="flex gap-5 text-white desktop:gap-8">
               <motion.li whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}>
                 <motion.div {...IconAnimation(0.5, true)}>
                   <a
@@ -142,7 +145,7 @@ function Landing() {
             </ul>
           </div>
         </div>
-        <section className="w-full h-full col-start-1 row-start-1 lg:absolute z-[40]">
+        <section className="w-full h-full col-start-1 row-start-1 z-[40] desktop:absolute">
           <Lanyard position={groupPosition} gravity={[0, -60, 0]} />
         </section>
       </section>

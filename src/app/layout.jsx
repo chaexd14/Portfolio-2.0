@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
 
       <body>
         {children}
-        <footer className="py-4 text-center text-[#D9D9D9] bg-[#0E0E0E] border-t border-b border-[#B7B5C2]">
+        <footer className="py-4 text-center text-[#D9D9D9] bg-[#0E0E0E] border-t border-b border-[#B7B5C2] desktop:text-xl">
           © 2025 King Amato. All rights reserved.
         </footer>
       </body>

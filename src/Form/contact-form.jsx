@@ -1,7 +1,9 @@
 function ContactForm({ contactMessage, sending }) {
   return (
     <>
-      <form onSubmit={contactMessage} className="flex flex-col gap-5">
+      <form
+        onSubmit={contactMessage}
+        className="flex flex-col gap-5 desktop:gap-8">
         <div className="flex flex-row gap-5">
           <input
             type="text"

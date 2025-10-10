@@ -6,6 +6,7 @@ import {
   faInstagram,
   faFacebook,
   faXTwitter,
+  faTiktok,
 } from '@fortawesome/free-brands-svg-icons';
 import { useState } from 'react';
 
@@ -73,71 +74,82 @@ function Contact() {
   return (
     <>
       {/* Contact */}
-      <section className="flex flex-col items-center w-full gap-10 py-20 border border-red-400 h-fit lg:gap-10">
+      <section className="flex flex-col items-center w-full gap-10 p-12 border border-red-400 h-fit desktop:w-[80%]">
         {/* Title */}
         <div className="flex justify-center w-full border border-red-400">
           <AnimatedTitle
             text="TAB +"
-            className="text-6xl font-semibold text-center text-white customFont lg:text-7xl lg:text-left"
+            className="text-6xl font-semibold text-white customFont desktop:text-7xl"
           />
 
           <AnimatedTitle
             text=" Mail"
-            className="customFont text-[#3B82F6] text-6xl lg:text-7xl text-center lg:text-left font-semibold"
+            className="customFont text-[#3B82F6] text-6xl font-semibold desktop:text-7xl"
           />
         </div>
 
         {/* Parent Content */}
-        <div className="flex flex-col justify-center w-full h-full border border-red-400 lg:flex-row lg:justify-around">
-          <div className="flex items-center justify-center w-full border border-red-400">
-            <div className="flex flex-col h-full gap-10 border border-red-400">
-              <section>
-                <h1 className="mb-3 text-lg text-white">Email</h1>
-                <button onClick={copyEmail} className="copy-button">
-                  <span
-                    className={`absolute inset-0 flex justify-center items-center transition-opacity duration-300 ${
-                      copied ? 'opacity-0' : 'opacity-100'
-                    }`}>
-                    Kingamato0@gmail.com
-                  </span>
-                  <span
-                    className={`absolute inset-0 flex justify-center items-center transition-opacity duration-300 ${
-                      copied ? 'opacity-100' : 'opacity-0'
-                    }`}>
-                    Copied!
-                  </span>
-                </button>
-              </section>
+        <div className="flex flex-col justify-center w-full h-full gap-10 border border-red-400 desktop:flex-row desktop:gap-40">
+          <div className="flex flex-col justify-center w-full h-full gap-8 border border-blue-400 desktop:w-fit desktop:gap-16">
+            <section>
+              <h1 className="mb-3 text-base text-white desktop:text-2xl">
+                Email
+              </h1>
+              <button
+                onClick={copyEmail}
+                className="copy-button desktop:w-[280px]">
+                <span
+                  className={`text-base absolute inset-0 flex justify-center items-center transition-opacity duration-300 desktop:text-xl ${
+                    copied ? 'opacity-0' : 'opacity-100'
+                  }`}>
+                  Kingamato0@gmail.com
+                </span>
+                <span
+                  className={`text-base absolute inset-0 flex justify-center items-center transition-opacity duration-300 ${
+                    copied ? 'opacity-100' : 'opacity-0'
+                  }`}>
+                  Copied!
+                </span>
+              </button>
+            </section>
 
-              <section>
-                <h1 className="mb-3 text-lg text-white">Social</h1>
-                <div className="flex flex-row gap-5">
-                  <a
-                    href="https://www.instagram.com/chaeyxd/"
-                    target="_blank"
-                    className="icons h-[60px] w-[60px]">
-                    <FontAwesomeIcon icon={faInstagram} />
-                  </a>
-                  <a
-                    href="https://web.facebook.com/king.amato.2025?mibextid=wwXIfr&_rdc=1&_rdr#"
-                    target="_blank"
-                    className="icons h-[60px] w-[60px]">
-                    <FontAwesomeIcon icon={faFacebook} />
-                  </a>
-                  <a
-                    href="https://x.com/miksss0_0?s=21"
-                    target="_blank"
-                    className="icons h-[60px] w-[60px]">
-                    <FontAwesomeIcon icon={faXTwitter} />
-                  </a>
-                </div>
-              </section>
-            </div>
+            <section>
+              <h1 className="mb-3 text-base text-white desktop:text-2xl">
+                Social
+              </h1>
+              <div className="grid grid-cols-3 gap-5 w-fit">
+                <a
+                  href="https://www.instagram.com/chaeyxd/"
+                  target="_blank"
+                  className="icons">
+                  <FontAwesomeIcon icon={faInstagram} />
+                </a>
+                <a
+                  href="https://web.facebook.com/king.amato.2025?mibextid=wwXIfr&_rdc=1&_rdr#"
+                  target="_blank"
+                  className="icons">
+                  <FontAwesomeIcon icon={faFacebook} />
+                </a>
+                <a
+                  href="https://x.com/miksss0_0?s=21"
+                  target="_blank"
+                  className="icons">
+                  <FontAwesomeIcon icon={faXTwitter} />
+                </a>
+
+                <a
+                  href="https://x.com/miksss0_0?s=21"
+                  target="_blank"
+                  className="icons">
+                  <FontAwesomeIcon icon={faTiktok} />
+                </a>
+              </div>
+            </section>
           </div>
 
           {/* Form */}
-          <div className="flex items-center justify-center w-full border border-red-400">
-            <div className="border border-red-400">
+          <div className="flex items-center justify-center w-full border border-red-400 desktop:w-fit">
+            <div className="border border-red-400 desktop:w-[500px]">
               <ContactForm contactMessage={contactMessage} sending={sending} />
             </div>
           </div>
