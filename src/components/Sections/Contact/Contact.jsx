@@ -74,9 +74,9 @@ function Contact() {
   return (
     <>
       {/* Contact */}
-      <section className="flex flex-col items-center w-full gap-10 p-12 border border-red-400 h-fit desktop:w-[80%]">
+      <section className="flex flex-col items-center w-full gap-10 p-12 h-fit desktop:w-[80%]">
         {/* Title */}
-        <div className="flex justify-center w-full border border-red-400">
+        <div className="flex justify-center w-full">
           <AnimatedTitle
             text="TAB +"
             className="text-6xl font-semibold text-white customFont desktop:text-7xl"
@@ -89,8 +89,8 @@ function Contact() {
         </div>
 
         {/* Parent Content */}
-        <div className="flex flex-col justify-center w-full h-full gap-10 border border-red-400 desktop:flex-row desktop:gap-40">
-          <div className="flex flex-col justify-center w-full h-full gap-8 border border-blue-400 desktop:w-fit desktop:gap-16">
+        <div className="flex flex-col justify-center w-full h-full gap-10 desktop:flex-row desktop:gap-40">
+          <div className="flex flex-col justify-center w-full h-full gap-8 desktop:w-fit desktop:gap-16">
             <section>
               <h1 className="mb-3 text-base text-white desktop:text-2xl">
                 Email
@@ -148,8 +148,8 @@ function Contact() {
           </div>
 
           {/* Form */}
-          <div className="flex items-center justify-center w-full border border-red-400 desktop:w-fit">
-            <div className="border border-red-400 desktop:w-[500px]">
+          <div className="flex items-center justify-center w-full desktop:w-fit">
+            <div className=" desktop:w-[500px]">
               <ContactForm contactMessage={contactMessage} sending={sending} />
             </div>
           </div>

@@ -18,9 +18,9 @@ function TechStack() {
   return (
     <>
       {/* Tech Stack */}
-      <section className="h-fit w-[100%] flex flex-col justify-center items-center p-12 gap-8 border border-red-400 desktop:w-[80%]">
-        <div className="flex items-center justify-between w-full border border-red-400 desktop:px-20">
-          <div className="flex items-center justify-center border border-red-400 w-fit">
+      <section className="h-fit w-[80%] flex flex-col justify-center items-center p-12 gap-8desktop:w-[80%]">
+        <div className="flex items-center justify-between w-full desktop:px-20">
+          <div className="flex items-center justify-center w-fit">
             <AnimatedTitle
               text="SHIFT +"
               className="text-4xl font-semibold text-center text-white customFont desktop:text-7xl"
@@ -34,7 +34,7 @@ function TechStack() {
 
           <Link
             href="/tech-stack"
-            className="inline-block font-sans text-xs text-[#D9D9D9] w-fit text-right border border-red-400 desktop:text-xl">
+            className="inline-block font-sans text-xs text-[#D9D9D9] w-fit text-right desktop:text-xl">
             View All{' '}
             <FontAwesomeIcon
               icon={faArrowRight}
@@ -43,8 +43,8 @@ function TechStack() {
           </Link>
         </div>
 
-        <div className="flex flex-col items-center justify-center w-full gap-10 border border-red-400 desktop:flex-row desktop:gap-20">
-          <div className="h-full w-full text-sm text-center text-[#D9D9D9] border border-red-400 desktop:text-2xl desktop:text-justify">
+        <div className="flex flex-col items-center justify-center w-full gap-10 desktop:flex-row desktop:gap-20">
+          <div className="h-full w-full text-sm text-center text-[#D9D9D9] desktop:text-2xl desktop:text-justify">
             <BlurText
               text="Showcases the programming languages, frameworks, tools, and technologies I use in my development journey."
               delay={50}
@@ -53,7 +53,7 @@ function TechStack() {
               onAnimationComplete={handleAnimationComplete}
             />
           </div>
-          <div className="w-full h-full overflow-hidden border border-red-400">
+          <div className="w-full h-full overflow-hidden">
             <InfiniteMovingCards
               items={Tools1}
               direction="right"
