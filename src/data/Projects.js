@@ -31,4 +31,12 @@ export const Projects_List = [
     stack: ['React', 'Js', 'MongoDB'],
     background: 'images/bg4.webp',
   },
+  {
+    id: 5,
+    title: 'Spendly',
+    description: 'Your spending buddy',
+    subtitle: 'Tech Stack',
+    stack: ['NextJs', 'Js', 'MongoDB', 'BetterAuth'],
+    background: 'images/bg5.webp',
+  },
 ];

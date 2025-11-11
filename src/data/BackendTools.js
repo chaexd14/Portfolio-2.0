@@ -39,4 +39,9 @@ export const BackendTools = [
     icon: 'images/mysql.svg',
     label: 'MySQL',
   },
+  {
+    id: 9,
+    icon: 'images/betterauth.svg',
+    label: 'BetterAuth',
+  },
 ];
