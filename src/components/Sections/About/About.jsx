@@ -39,7 +39,7 @@ function About() {
           </div>
           <div className="h-full w-full flex flex-col gap-8 text-sm text-center leading-relaxed text-[#D9D9D9] desktop:text-xl desktop:text-justify">
             <BlurText
-              text="I'm a 2nd-year IT student at Rizal Technological University who enjoys coding and problem-solving as I work toward becoming a Full Stack Web Developer. I am focused on developing my technical skills and gaining practical experience to prepare for a professional career in Web Development."
+              text="I'm a 3rd-year IT student at Rizal Technological University who enjoys coding and problem-solving as I work toward becoming a Full Stack Web Developer. I am focused on developing my technical skills and gaining practical experience to prepare for a professional career in Web Development."
               delay={50}
               animateBy="words"
               direction="top"
