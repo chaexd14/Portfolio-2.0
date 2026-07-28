@@ -20,7 +20,6 @@ const eslintConfig = [
       'next-env.d.ts',
     ],
     rules: {
-      quotes: ['error', 'single', { avoidEscape: true }],
       'react/jsx-curly-spacing': ['error', { when: 'never', children: true }],
     },
   },
