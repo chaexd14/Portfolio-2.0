@@ -21,7 +21,6 @@ const eslintConfig = [
     ],
     rules: {
       quotes: ['error', 'single', { avoidEscape: true }],
-      'prettier/prettier': ['error', { singleQuote: true }],
       'react/jsx-curly-spacing': ['error', { when: 'never', children: true }],
     },
   },
